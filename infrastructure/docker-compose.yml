@@ -1,0 +1,24 @@
+version: "3.7"
+
+networks:
+  zx_bridge:
+
+services:
+
+  zx-db-mysql:
+    build:
+      context: ./zx-db-mysql
+    image: zx/zx-db-mysql:latest
+    ports:
+      - 3307:3306
+    networks:
+      - zx_bridge
+
+  zx-db-postgres:
+    build:
+      context: ./zx-db-postgres
+    image: zx/zx-db-postgres:latest
+    ports:
+      - 5432:5432
+    networks:
+      - zx_bridge
