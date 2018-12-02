@@ -1,3 +1,3 @@
-<h1>DTS Platform</h1>
+<h1>ZX Platform</h1>
 
 Still in development
